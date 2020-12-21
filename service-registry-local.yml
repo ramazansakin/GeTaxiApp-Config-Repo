@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: SERVICE-REGISTRY
+    name: service-registry
 
 eureka:
   instance:
