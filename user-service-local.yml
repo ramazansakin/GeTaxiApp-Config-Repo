@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: USER-SERVICE
   zipkin:
     base-url: http://127.0.0.1:9411/
   datasource:
@@ -19,9 +17,6 @@ spring:
       ddl-auto: update
   main:
     allow-bean-definition-overriding: true
-
-server:
-  port: 9001
 
 eureka:
   client:
