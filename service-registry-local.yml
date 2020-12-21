@@ -4,9 +4,10 @@ server:
 eureka:
   instance:
     hostname: localhost
+    preferIpAddress: false
   client:
-    fetch-registry: false
-    register-with-eureka: false
+    registerWithEureka: false
+    fetchRegistry: false
 
 logging:
   level:
