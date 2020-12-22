@@ -27,4 +27,4 @@ eureka:
 
 sample:
   param:
-    to-test: Welcome
+    test: Welcome
