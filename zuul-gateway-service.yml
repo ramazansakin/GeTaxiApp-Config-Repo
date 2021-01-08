@@ -1,0 +1,50 @@
+server:
+  port: 9000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+              
+zuul:
+  routes:
+    users:
+      path: /users/**
+      serviceId: user-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+  security:
+    enabled: false
+
+endpoints.enabled: false
+
+endpoints:
+  info.enabled: true
+  health.enabled: true
+
+jwt:
+  secret: jwt-sample-secret
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        sleepWindowInMilliseconds: 70000
+        forceClosed: true
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+  shareSecurityContext: true
