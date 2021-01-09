@@ -14,7 +14,7 @@ zuul:
   routes:
     users:
       path: /users/**
-      serviceId: user-service
+      serviceId: host.docker.internal:user-service
 
 management:
   endpoints:
