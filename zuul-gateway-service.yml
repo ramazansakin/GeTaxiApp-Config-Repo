@@ -15,6 +15,7 @@ zuul:
     users:
       path: /users/**
       serviceId: user-service
+      stripPrefix: false
 
 management:
   endpoints:
