@@ -12,10 +12,20 @@ eureka:
               
 zuul:
   routes:
-    users:
+    user-service:
       path: /users/**
       serviceId: user-service
       stripPrefix: false
+
+user-service:
+  ribbon:
+    eureka:
+      enabled: true
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    ConnectTimeout: 5000
+    ReadTimeout: 5000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
 
 management:
   endpoints:
