@@ -19,7 +19,7 @@ zuul:
  
 user-service:
   ribbon:
-    listOfServers: http://localhost:9001
+    listOfServers: http://user-service:9001
    
 
 management:
