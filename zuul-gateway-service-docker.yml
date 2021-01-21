@@ -19,13 +19,7 @@ zuul:
  
 user-service:
   ribbon:
-    eureka:
-      enabled: true
-    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
-    ConnectTimeout: 5000
-    ReadTimeout: 5000
-    MaxTotalHttpConnections: 500
-    MaxConnectionsPerHost: 100
+    listOfServers: http://localhost:9001
    
 
 management:
